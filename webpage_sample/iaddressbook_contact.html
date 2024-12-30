@@ -1,0 +1,620 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head>
+    <title>PHP iAddressBook</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="shortcut icon" href="/iaddressbook-instr/lib/tpl/default/images/favicon.ico" />
+    <link rel="stylesheet" media="screen" type="text/css" href="/iaddressbook-instr/lib/tpl/default/design.css" />
+
+	<link rel="stylesheet" type="text/css" href="/iaddressbook-instr/lib/tpl/default/applesearch/default.css" id="default"  />
+	<link rel="stylesheet" type="text/css" href="/iaddressbook-instr/lib/tpl/default/applesearch/dummy.css" id="dummy_css"  />
+	<script type="text/javascript" src="/iaddressbook-instr/lib/tpl/default/applesearch/applesearch.js"></script>
+
+    <script type="text/javascript">
+    <!--
+    window.onload = function () {
+        applesearch.init('/iaddressbook-instr/lib/tpl/default/applesearch/');
+        applesearch.onChange('srch_fld','srch_clear');
+        document.search.q.focus(); 
+        document.search.q.select();
+    }
+    -->
+    </script>
+</head>
+
+<body>
+
+
+<div class="mainview">
+    <!-- Begin Logo -->
+    <table width="100%">
+        <tr>
+            <td>
+                <div class="logo">
+                    <a href='http://192.168.56.101:80/iaddressbook-instr/?do=reset'>
+                    <img src="/iaddressbook-instr/lib/tpl/default/images/logo.png">
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="title">PHP iAddressBook</div>
+            </td>
+            <td align="right" valign="top">
+                <div class="login_box">
+                    <div class='person_smalltext'>Logged in as Fred the Geek</div><a href='?do=logout'>Logout</a>                </div>
+        
+                <div class="birthday_box">
+                    <div class="birthday_title">Upcoming Birthdays</div>
+                    <div class="birthday_text">none<br/></div>
+                </div>                
+            </td>
+        </tr>
+    </table>
+    <!-- End Logo -->
+
+    <div style="height: 30px;" ></div>
+    
+    <!-- Begin Menu --> 
+    <table border="0" width="100%">
+        <tr>
+            <td align="left">
+                <!-- Begin Import VCard -->
+                <form method="POST" enctype="multipart/form-data" action="" style="float: left; padding-left: 10px;">
+                    <input type="hidden" name="do" value="import_vcard" />
+                    <input type="file" name="vcard_file" value="" size="" class="button" />
+                    <input type="submit" value="Import vCard" class="button" />
+                </form>
+                <!-- End Import VCard -->
+            </td>
+            <td align="right" style="padding-right: 10px;" >
+                <div class="search">
+    <div id="applesearch">
+        <span class="sbox_l"></span>
+        <span class="sbox">
+            <form method="POST" action="" name='search'>
+                <input type="hidden" name="do" value="search" />
+                <input type="hidden" name="id" value="BPBPBPB{462BPBPBPB}" />
+                <input type="search" name="q"  value="" id="srch_fld" placeholder="Search" autosave="applestyle_srch" results="5" onkeyup="applesearch.onChange('srch_fld','srch_clear')" />
+            </form>
+        </span>
+        <span class="sbox_r" id="srch_clear"></span>
+    </div>
+</div>
+            </td>
+        </tr>
+    </table>
+    <!-- End Menu --> 
+<form>
+  <input type="text" name="origin" value="BPBPBPB{Rutherford, Jayc@#VECTOR#@BPBPBPB}">
+</form>
+    <!-- Begin Main --> 
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+     <tr>
+        <td width="10"></td>
+        
+        <!-- Begin Contact List -->
+        <td class="contactlist_td">
+    <div class="contactlist">
+        <div class="panel">
+            <table class="header">
+                <tr class="header_tr">
+                    <td class="endcap"><img src="/iaddressbook-instr/lib/tpl/default/images/split1_left.gif"></td>
+                    <td class="middle">Contacts (500)</td>
+                    <td class="endcap"><img src="/iaddressbook-instr/lib/tpl/default/images/split1_right.gif"></td>
+                </tr>
+            </table>
+        </div>
+                
+        <!-- Letter Filter Begin -->
+        <div style="height: 0.5em;"></div>
+        
+        <div class="person_smalltext" style="text-align: center; padding-left: 10px; padding-right: 10px;" >
+            <a href="javascript:select_l('#')" > # </a>|<a href="javascript:select_l('A')" > A </a>|<a href="javascript:select_l('B')" > B </a>|<a href="javascript:select_l('C')" > C </a>|<a href="javascript:select_l('D')" > D </a>|<a href="javascript:select_l('E')" > E </a>|<a href="javascript:select_l('F')" > F </a>|<a href="javascript:select_l('G')" > G </a>|<a href="javascript:select_l('H')" > H </a>|<a href="javascript:select_l('I')" > I </a>|<a href="javascript:select_l('J')" > J </a>|<a href="javascript:select_l('K')" > K </a>|<a href="javascript:select_l('L')" > L </a>|<a href="javascript:select_l('M')" > M </a>|<a href="javascript:select_l('N')" > N </a>|<a href="javascript:select_l('O')" > O </a>|<a href="javascript:select_l('P')" > P </a>|<a href="javascript:select_l('Q')" > Q </a>|<a href="javascript:select_l('R')" > R </a>|<a href="javascript:select_l('S')" > S </a>|<a href="javascript:select_l('T')" > T </a>|<a href="javascript:select_l('U')" > U </a>|<a href="javascript:select_l('V')" > V </a>|<a href="javascript:select_l('W')" > W </a>|<a href="javascript:select_l('X')" > X </a>|<a href="javascript:select_l('Y')" > Y </a>|<a href="javascript:select_l('Z')" > Z </a>|<u><a href="javascript:select_l('A-Z')" > A-Z </a></u>|        </div>
+        
+        <div style="height: 0.5em;"></div>
+        <!-- Letter Filter End -->
+        
+        <input type='checkbox' name="selectall" onClick="select_all('ct_form', this.checked)" style="float: left; margin-left: 5px; margin-top: 7px;"/>
+        <div class="person_smalltext" style="margin-top: 5px;">
+            Category                        <form method="post" action="" >
+                <input type="hidden" name="do" value="cat_select" />
+                <select name="cat_id" size="1" onChange="submit()" >
+                    <option value='0' BPBPBPB{selectedBPBPBPB} >BPBPBPB{AllBPBPBPB}</option> 
+<option value='BPBPBPB{6BPBPBPB}'  >BPBPBPB{Modified ContactsBPBPBPB}</option> 
+<option value='BPBPBPB{5BPBPBPB}'  >BPBPBPB{Last ImportBPBPBPB}</option> 
+                </select>
+            </form>
+		</div>
+		<div class="separator100">&nbsp;</div>
+        
+        <form method="post" action="" name='ct_form'>
+
+            <div class="contactlist_item1">
+        <input type="checkbox" name="ct_BPBPBPB{538BPBPBPB}" value="BPBPBPB{538BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{538BPBPBPB}'>BPBPBPB{Russel, OrinBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item2">
+        <input type="checkbox" name="ct_BPBPBPB{769BPBPBPB}" value="BPBPBPB{769BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{769BPBPBPB}'>BPBPBPB{Rutherford, AlfonsoBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item1">
+        <input type="checkbox" name="ct_BPBPBPB{832BPBPBPB}" value="BPBPBPB{832BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{832BPBPBPB}'>BPBPBPB{Rutherford, JayceBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item2">
+        <input type="checkbox" name="ct_BPBPBPB{634BPBPBPB}" value="BPBPBPB{634BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{634BPBPBPB}'>BPBPBPB{Rutherford, LavonBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item1">
+        <input type="checkbox" name="ct_BPBPBPB{500BPBPBPB}" value="BPBPBPB{500BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{500BPBPBPB}'>BPBPBPB{Rutherford, RichieBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item2">
+        <input type="checkbox" name="ct_BPBPBPB{867BPBPBPB}" value="BPBPBPB{867BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{867BPBPBPB}'>BPBPBPB{Rutherford, SantinoBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item1">
+        <input type="checkbox" name="ct_BPBPBPB{492BPBPBPB}" value="BPBPBPB{492BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{492BPBPBPB}'>BPBPBPB{Satterfield, GonzaloBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item2">
+        <input type="checkbox" name="ct_BPBPBPB{637BPBPBPB}" value="BPBPBPB{637BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{637BPBPBPB}'>BPBPBPB{Sauer, MathiasBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item1">
+        <input type="checkbox" name="ct_BPBPBPB{450BPBPBPB}" value="BPBPBPB{450BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{450BPBPBPB}'>BPBPBPB{Schaden, HeathBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item2">
+        <input type="checkbox" name="ct_BPBPBPB{494BPBPBPB}" value="BPBPBPB{494BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{494BPBPBPB}'>BPBPBPB{Schaden, JeffryBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item1">
+        <input type="checkbox" name="ct_BPBPBPB{485BPBPBPB}" value="BPBPBPB{485BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{485BPBPBPB}'>BPBPBPB{Schamberger, SabinaBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item2">
+        <input type="checkbox" name="ct_BPBPBPB{807BPBPBPB}" value="BPBPBPB{807BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{807BPBPBPB}'>BPBPBPB{Schiller, VladimirBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item1">
+        <input type="checkbox" name="ct_BPBPBPB{701BPBPBPB}" value="BPBPBPB{701BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{701BPBPBPB}'>BPBPBPB{Schinner, JustinaBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item2">
+        <input type="checkbox" name="ct_BPBPBPB{559BPBPBPB}" value="BPBPBPB{559BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{559BPBPBPB}'>BPBPBPB{Schmeler, MarquiseBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item1">
+        <input type="checkbox" name="ct_BPBPBPB{529BPBPBPB}" value="BPBPBPB{529BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{529BPBPBPB}'>BPBPBPB{Schmeler, MissouriBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item2">
+        <input type="checkbox" name="ct_BPBPBPB{643BPBPBPB}" value="BPBPBPB{643BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{643BPBPBPB}'>BPBPBPB{Schmeler, PierreBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item1">
+        <input type="checkbox" name="ct_BPBPBPB{721BPBPBPB}" value="BPBPBPB{721BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{721BPBPBPB}'>BPBPBPB{Schmeler, QuintenBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item2">
+        <input type="checkbox" name="ct_BPBPBPB{918BPBPBPB}" value="BPBPBPB{918BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{918BPBPBPB}'>BPBPBPB{Schmidt, MurrayBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item1">
+        <input type="checkbox" name="ct_BPBPBPB{554BPBPBPB}" value="BPBPBPB{554BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{554BPBPBPB}'>BPBPBPB{Schmitt, CorrineBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item2">
+        <input type="checkbox" name="ct_BPBPBPB{482BPBPBPB}" value="BPBPBPB{482BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{482BPBPBPB}'>BPBPBPB{Schmitt, LambertBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item1">
+        <input type="checkbox" name="ct_BPBPBPB{753BPBPBPB}" value="BPBPBPB{753BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{753BPBPBPB}'>BPBPBPB{Schmitt, MarisolBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item2">
+        <input type="checkbox" name="ct_BPBPBPB{726BPBPBPB}" value="BPBPBPB{726BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{726BPBPBPB}'>BPBPBPB{Schmitt, StacyBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item1">
+        <input type="checkbox" name="ct_BPBPBPB{787BPBPBPB}" value="BPBPBPB{787BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{787BPBPBPB}'>BPBPBPB{Schneider, PorterBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item2">
+        <input type="checkbox" name="ct_BPBPBPB{794BPBPBPB}" value="BPBPBPB{794BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{794BPBPBPB}'>BPBPBPB{Schoen, DariusBPBPBPB} </a><br>
+</div>
+<div class="contactlist_item1">
+        <input type="checkbox" name="ct_BPBPBPB{779BPBPBPB}" value="BPBPBPB{779BPBPBPB}" style='margin-left: 5px;'>
+    <img src="/iaddressbook-instr/lib/tpl/default/images/person_small.png" >
+    <a href='?id=BPBPBPB{779BPBPBPB}'>BPBPBPB{Schoen, JerrellBPBPBPB} </a><br>
+</div>
+            
+            <div class="separator100">&nbsp;</div>
+            
+            <!-- Navigation Begin -->
+            <div class="person_smalltext">
+                <div style="text-align: center;" >
+                    | <a href="javascript:select_o('0')" >1 - 25</a> 
+| <a href="javascript:select_o('25')" >26 - 50</a> 
+| <a href="javascript:select_o('50')" >51 - 75</a> 
+| <a href="javascript:select_o('75')" >76 - 100</a> 
+| <a href="javascript:select_o('100')" >101 - 125</a> 
+| <a href="javascript:select_o('125')" >126 - 150</a> 
+| <a href="javascript:select_o('150')" >151 - 175</a> 
+| <a href="javascript:select_o('175')" >176 - 200</a> 
+| <a href="javascript:select_o('200')" >201 - 225</a> 
+| <a href="javascript:select_o('225')" >226 - 250</a> 
+| <a href="javascript:select_o('250')" >251 - 275</a> 
+| <a href="javascript:select_o('275')" >276 - 300</a> 
+| <a href="javascript:select_o('300')" >301 - 325</a> 
+| <a href="javascript:select_o('325')" >326 - 350</a> 
+| <a href="javascript:select_o('350')" >351 - 375</a> 
+| 376 - 400 
+| <a href="javascript:select_o('400')" >401 - 425</a> 
+| <a href="javascript:select_o('425')" >426 - 450</a> 
+| <a href="javascript:select_o('450')" >451 - 475</a> 
+| <a href="javascript:select_o('475')" >476 - 500</a> 
+|                </div>
+            </div>
+            
+            <div style="height: 0.5em;"></div>
+            
+            <!-- Navigation End -->
+
+            <div class="person_smalltext">
+                
+                <!-- Contacts Section Begin -->
+                Contacts                <div class="separator100">&nbsp;</div>
+                <div style="float: left;"> <a href="javascript:do_action('new')">new contact</a> </div>
+                <div style="float: right;"> <a href="javascript:do_action('delete_many', 'Do you want to delete the selected contacts?')">delete contact(s)</a> </div>
+
+                <div style="height: 3em;"></div>
+                <!-- Contacts Section End -->
+
+                <!-- Category Section Begin -->
+                Category                <div class="separator100">&nbsp;</div>
+
+                <select name="cat_menu" size="1" style="float: right;" onChange="cat_menu_change()">
+                    <option value='' selected>select action...</option>
+                                        <optgroup label="add to">
+                                        </optgroup>
+                    <optgroup label="remove from">
+                    <option value='delcon_BPBPBPB{6BPBPBPB}' >BPBPBPB{Modified ContactsBPBPBPB}</option> 
+                    </optgroup>
+                </select>
+                
+                <div style="height: 2.2em;"></div>
+                
+                <div style="float: left; margin-right: 5px;"> <a href="javascript:do_action('cat_add')">create category</a> </div>
+                <input type="text" name="cat_name" class="text" style="float: right;" onkeypress="CheckEnter(event);" />
+                
+                <div style="height: 3em;"></div>
+                <!-- Category Section End -->
+
+                <!-- Import Section Begin -->
+                Import/Export                <div class="separator100">&nbsp;</div>
+                <div style="float: left;"> <a href="javascript:do_action('export_vcard_cat')">export as vCard(s)</a> </div>
+                <div style="height: 1.5em;"></div>
+                <div style="float: left;"> <a href="javascript:do_action('export_csv_cat')">export CSV file</a> </div>
+                <div style="height: 1.5em;"></div>
+                <div style="float: left;"> <a href="javascript:do_action('export_ldif_cat')">export LDIF file</a> </div>
+                <div style="height: 1.5em;"></div>
+                <div style="float: left;"> <a href="javascript:do_action('import_folder')">import from folder</a> </div>
+                <div style="height: 3em;"></div>
+                <!-- Import Section End -->
+                
+                
+                <input type="hidden" name="do" value="" />
+                <input type="hidden" name="cat_id" value="" />
+                <input type="hidden" name="l" value="" />
+                <input type="hidden" name="o" value="" />
+            </div>    
+        </form>
+        
+    </div>
+</td>
+
+<script type="text/javascript">
+function select_all(formname, checkvalue) {
+    var theForm = this.document.forms[formname], z = 0;
+    for(z=0; z<theForm.length;z++) {
+        if(theForm[z].type == 'checkbox' && theForm[z].name != 'checkall') {
+            theForm[z].checked = !theForm[z].checked;
+        }
+    }
+}
+function select_l(letter) {
+    document.ct_form.elements["do"].value = 'select_letter';
+    document.ct_form.elements["l"].value = letter;
+    document.ct_form.submit();
+}
+function select_o(offset) {
+	document.ct_form.elements["do"].value = 'select_offset';
+	document.ct_form.elements["o"].value = offset;
+	document.ct_form.submit();
+}
+function do_action(act, confirmation) {
+    if(confirmation) {
+        if(!confirm(confirmation)) return;
+    }
+    document.ct_form.elements["do"].value = act;
+    document.ct_form.submit();
+}
+function cat_menu_change() {
+    var options = document.ct_form.cat_menu.options;
+    for (var i=0; i < options.length; i++) {
+        if (options[i].selected) {
+            var o = options[i].value.split("_");
+            var action = o[0];
+            var id = o[1];
+            //alert("action: " + action + " id: " + id);
+            document.ct_form.elements["cat_id"].value = id;
+            if(action == "catdel") do_action('cat_del', 'Do you want to delete this category?');
+            if(action == "addcon") do_action('cat_add_contacts');
+            if(action == "delcon") do_action('cat_del_contacts', 'Do you want to remove the selected contacts from this category?');
+        }
+    }
+}
+function CheckEnter(evt) {
+    var keyCode = (evt.charCode)? evt.charCode:((evt.which)? evt.which:evt.keyCode);
+    if (keyCode != 13) {
+        return true;
+    }
+    // Enter has been hit:
+    do_action('cat_add');
+    return false;
+}
+</script>
+        <!-- End Contact List -->
+        
+        <td width="50"></td>
+        
+        <!-- Begin Person View -->
+        <td class="personview">
+            <div class="personview">
+                <div class="panel">
+                    <table class="header">
+                        <tr class="header_tr">
+                            <td class="endcap"><img src="/iaddressbook-instr/lib/tpl/default/images/split1_left.gif"></td>
+                            <td class="middle"> </td>
+                            <td class='endcap'><img src="/iaddressbook-instr/lib/tpl/default/images/split1_right.gif"></td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <table width="100%">
+    <tr><td style="height: 2em;"></td><td></td></tr>
+    <tr>
+        <td class="person_left" >
+            <!-- Begin Photo -->
+            <img class="person_photo" width='128' src="?do=img&id=BPBPBPB{462BPBPBPB}">
+            <!-- End Photo -->
+        </td>
+        <td class="person_right" >
+            <!-- Begin Name / Company -->
+                        <div class="person_name">
+                BPBPBPB{Mr.BPBPBPB}                BPBPBPB{LelandBPBPBPB}                                BPBPBPB{KirlinBPBPBPB}                                <br>
+            </div>
+            <div class="person_nickname">
+                            </div>
+            <div class="person_text">
+                BPBPBPB{Senior Division DesignerBPBPBPB}<br>
+                <br>
+                BPBPBPB{Jacobi, Friesen and WintheiserBPBPBPB}<br>                
+            </div>
+                        <!-- End Name / Company -->
+        </td>
+    </tr>
+
+    <tr><td style="height: 2em;"></td><td></td></tr>
+
+    <!-- Begin Phones -->
+    <tr>
+    <td class="person_left">
+        <div class="person_labels">
+            BPBPBPB{homeBPBPBPB}        </div>
+    </td>
+    <td class="person_right">
+        <div class="person_text">
+            BPBPBPB{672-742-4153BPBPBPB}        </div>
+    </td>
+</tr>
+<tr>
+    <td class="person_left">
+        <div class="person_labels">
+            BPBPBPB{workBPBPBPB}        </div>
+    </td>
+    <td class="person_right">
+        <div class="person_text">
+            BPBPBPB{756-151-7979BPBPBPB}        </div>
+    </td>
+</tr>
+    <!-- End Phones -->
+
+    <tr><td style="height: 2em;"></td><td></td></tr>
+
+    <!-- Begin Emails -->
+    <tr>
+    <td class="person_left">
+        <div class="person_labels">
+            BPBPBPB{homeBPBPBPB}        </div>
+    </td>
+    <td class="person_right">
+        <div class="person_text">
+            <a href='mailto:BPBPBPB{chauncey.smitham10@example.orgBPBPBPB}' >BPBPBPB{chauncey.smitham10@example.orgBPBPBPB}</a>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td class="person_left">
+        <div class="person_labels">
+            BPBPBPB{workBPBPBPB}        </div>
+    </td>
+    <td class="person_right">
+        <div class="person_text">
+            <a href='mailto:BPBPBPB{deven_labadie@example.netBPBPBPB}' >BPBPBPB{deven_labadie@example.netBPBPBPB}</a>
+        </div>
+    </td>
+</tr>
+    <!-- End Emails -->
+
+    <tr><td style="height: 2em;"></td><td></td></tr>
+
+    <!-- Begin URLs -->
+        <!-- End URLs -->
+
+    <tr><td style="height: 2em;"></td><td></td></tr>
+
+    <!-- Begin Birthday -->
+        <!-- End Birthday -->
+
+    <tr><td style="height: 2em;"></td><td></td></tr>
+
+    <!-- Begin Relatednames -->
+        <!-- End Relatednames -->
+
+
+    <tr><td style="height: 2em;"></td><td></td></tr>
+
+    <!-- Begin Chathandles -->
+        <!-- End Chathandles -->
+
+    <tr><td style="height: 2em;"></td><td></td></tr>
+
+    <!-- Begin Addresses -->
+    <tr>
+    <td class="person_left">
+        <div class="person_labels">
+            BPBPBPB{homeBPBPBPB}<br>
+            
+            <div class="person_smalltext">
+                <a href='BPBPBPB{http://maps.google.com/maps?f=q&hl=en&q=38390-1008,+618+Carley+Manors,+Medhurstside,+MTBPBPBPB}' target='_blank' >Map</a>            </div>
+        </div>
+    </td>
+    <td class="person_right">
+        <div class="person_text">
+            BPBPBPB{618 Carley ManorsBPBPBPB}<br>
+            BPBPBPB{38390-1008BPBPBPB} BPBPBPB{MedhurstsideBPBPBPB}<br>
+            BPBPBPB{BarbadosBPBPBPB}<br>
+            BPBPBPB{MTBPBPBPB}            <div style="height: 1em;">&nbsp;</div>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td class="person_left">
+        <div class="person_labels">
+            BPBPBPB{workBPBPBPB}<br>
+            
+            <div class="person_smalltext">
+                <a href='BPBPBPB{http://maps.google.com/maps?f=q&hl=en&q=06400-8263,+618+Carley+Manors,+North+Enidton,+AZBPBPBPB}' target='_blank' >Map</a>            </div>
+        </div>
+    </td>
+    <td class="person_right">
+        <div class="person_text">
+            BPBPBPB{618 Carley ManorsBPBPBPB}<br>
+            BPBPBPB{06400-8263BPBPBPB} BPBPBPB{North EnidtonBPBPBPB}<br>
+            BPBPBPB{UgandaBPBPBPB}<br>
+            BPBPBPB{AZBPBPBPB}            <div style="height: 1em;">&nbsp;</div>
+        </div>
+    </td>
+</tr>
+    <!-- End Addresses -->
+
+    <tr><td style="height: 1em;"></td><td></td></tr>
+    
+    <!-- Begin Notes -->
+        <!-- End Notes -->
+
+    <tr><td style="height: 2em;"></td><td></td></tr>
+
+    <!-- Begin Categories -->
+    <tr>
+        <td class="person_left">
+                <div class="person_labels">Category</div>
+            </td>
+            <td class="person_right">
+                <div class="person_text">
+                    <a href='?do=cat_select&cat_id=BPBPBPB{6BPBPBPB}'>BPBPBPB{Modified ContactsBPBPBPB}</a>  <a href='?do=cat_select&cat_id=BPBPBPB{5BPBPBPB}'>BPBPBPB{Last ImportBPBPBPB}</a>                  </div>
+            </td>
+            </tr>
+    <!-- End Categories -->
+
+    <tr><td style="height: 2em;"></td><td></td></tr>
+    
+</table>
+
+
+<div class="person_smalltext">
+    BPBPBPB{703d39f6-9e4c-9bcc-f9b7-54f619c4305aBPBPBPB} &mdash; updated: BPBPBPB{12.09.2018 08:58BPBPBPB}</div>
+<div class="separator100"></div>
+
+
+<!-- Begin Buttons -->
+    <form method="POST" action="">
+        <input type="hidden" name="id" value="BPBPBPB{462BPBPBPB}" />
+        <input type="hidden" name="do" value="edit" />
+        <input type="submit" value="Edit" class="button" style="float: right;" />
+    </form>
+    <form method="POST" action="">
+        <input type="hidden" name="do" value="delete" />
+        <input type="hidden" name="id" value="BPBPBPB{462BPBPBPB}" />
+        <input type="submit" value="Delete Contact" onClick="return confirm('BPBPBPB{Kirlin, LelandBPBPBPB}: Do you want to delete this contact?')" class="button" style="float: right;" />
+    </form>
+    <form method="post" action="">
+        <input type="hidden" name="do" value="export_vcard" />
+        <input type="hidden" name="id" value="BPBPBPB{462BPBPBPB}" />
+        <input type="submit" value="Export as vCard" class="button" style="float: right;" />
+    </form>
+<!-- End Buttons -->
+                
+                <br>
+            </div>
+        </td>
+        <!-- End Person View -->
+        
+        <td width="10"></td>
+
+     </tr>
+    </table>
+    <!-- End Main --> 
+
+    <!-- Begin Footer --> 
+    <div class="separator">&nbsp;</div>
+    <div class="footer">
+        <a href='http://iaddressbook.org/'>PHP iAddressbook 3.1-166
+</a>
+    </div>
+    <!-- End Footer --> 
+
+</div>
+
+
+</body>
+</html>
